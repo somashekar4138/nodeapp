@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const user = require('./model');
 const history = require('./history');
-mongoose.connect('mongodb+srv://praneeth:praneeth4138@cluster0.fldpx3s.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('');
 router.get('/upd_balance/:access_key/:balance',async (req,res)=>{
     const user_data = await user.findOne({access_key:req.params.access_key});
     if(user_data){
